@@ -1,0 +1,1173 @@
+/* ==========================================================
+   LAB CATALOG
+========================================================== */
+
+.catalog-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ==========================================================
+   HEADER (CATALOG HEADER WITH BUTTON)
+========================================================== */
+
+.catalog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.catalog-header .page-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.page-header p {
+  margin-top: 6px;
+  margin-bottom: 0;
+  font-size: 16px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* ==========================================================
+   BUTTON REFACTOR (CONSOLIDATED BASE & VARIANTS)
+========================================================== */
+
+.btn-square {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 48px;
+  padding: 4px 22px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-square:active {
+  transform: scale(0.97);
+}
+
+.btn-square:focus-visible {
+  outline: 2px solid #334155;
+  outline-offset: 3px;
+}
+
+.btn-primary {
+  background: #28427f;
+  color: #ffffff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #1b3368;
+  color: #ffffff;
+}
+
+.btn-outline {
+  background: #ffffff;
+  color: #28427f;
+  border: 1px solid #28427f;
+}
+
+.btn-outline:hover {
+  background: #f4f7ff;
+  color: #1b3368;
+  border-color: #1b3368;
+}
+
+/* ==========================================================
+   SEARCH
+========================================================== */
+
+.catalog-search {
+  position: relative;
+  width: 100%;
+  max-width: 850px;
+}
+
+.catalog-search i {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  font-size: 16px;
+}
+
+.catalog-search input {
+  width: 100%;
+  height: 56px;
+  padding: 0 18px 0 48px;
+  border: 1px solid #d8e1ee;
+  border-radius: 14px;
+  background: #ffffff;
+  font-size: 16px;
+  color: #334155;
+  transition: 0.25s;
+}
+
+.catalog-search input::placeholder {
+  color: #94a3b8;
+}
+
+.catalog-search input:focus {
+  outline: none;
+  border-color: #28427f;
+  box-shadow: 0 0 0 4px rgba(40, 66, 127, 0.08);
+}
+
+/* ==========================================================
+   SERVICE TABS
+========================================================== */
+
+.catalog-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.catalog-tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 20px;
+  min-width: 140px;
+  height: 60px;
+  border-radius: 18px;
+  border: 1px solid #d9e3ef;
+  background: #ffffff;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.catalog-tab:hover {
+  border-color: #c4d3e6;
+  background: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.08);
+}
+
+.catalog-tab:hover span {
+  color: #1f2f5f;
+}
+
+.catalog-tab.active {
+  background: #22356d;
+  border-color: #22356d;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(34, 53, 109, 0.22);
+}
+
+.catalog-tab.active span {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.catalog-tab span {
+  font-size: 16px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.catalog-tab-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.catalog-tab.active .catalog-tab-icon {
+  filter: none;
+}
+
+/* ==========================================================
+   DEEP DIVE CARD
+========================================================== */
+
+.catalog-title-icon {
+  width: 74px;
+  height: 74px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.catalog-info-card {
+  padding: 30px 34px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
+  background: #ffffff;
+  border: 1px solid #dbe4ef;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.catalog-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  position: relative;
+}
+
+.catalog-title-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex: 1;
+  min-width: 0;
+}
+
+.catalog-title-row h2 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.catalog-title-row p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  color: #334155;
+}
+
+/* ==========================================================
+   SERVICE ACTIONS
+========================================================== */
+
+.service-actions {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.service-actions-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-width: 150px;
+  height: 56px;
+  padding: 0 22px;
+
+  border: 1px solid #28427f;
+  border-radius: 12px;
+
+  background: #28427f;
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.service-actions-btn:hover {
+  background: #1f356d;
+  border-color: #1f356d;
+  color: #ffffff;
+}
+
+.service-actions-btn i {
+  font-size: 14px;
+}
+
+/* ==========================================================
+   ACTIONS DROPDOWN MENU
+========================================================== */
+
+.service-actions-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  z-index: 100;
+
+  width: 260px;
+  padding: 8px;
+
+  background: #ffffff;
+  border: 1px solid #d5deeb;
+  border-radius: 14px;
+
+  box-shadow:
+    0 14px 30px rgba(15, 23, 42, 0.12),
+    0 4px 10px rgba(15, 23, 42, 0.06);
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================================
+   ACTION ITEMS
+========================================================== */
+
+.service-actions-menu button,
+.service-actions-menu a {
+  width: 100%;
+  min-height: 52px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 11px 14px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: transparent;
+  color: #1e293b;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  text-decoration: none;
+  text-align: left;
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+/* ==========================================================
+   SEPARATOR LINES
+========================================================== */
+
+.service-actions-menu button:not(:last-child),
+.service-actions-menu a:not(:last-child) {
+  border-bottom: 1px solid #dbe4ef;
+  border-radius: 0;
+}
+
+/* ==========================================================
+   HOVER
+========================================================== */
+
+.service-actions-menu button:hover,
+.service-actions-menu a:hover {
+  background: #f1f5ff;
+  color: #28427f;
+}
+
+/* ==========================================================
+   ACTION ICONS
+========================================================== */
+
+.service-actions-menu i {
+  width: 20px;
+  text-align: center;
+  font-size: 17px;
+  color: #28427f;
+  flex-shrink: 0;
+}
+
+.service-actions-menu button:hover i,
+.service-actions-menu a:hover i {
+  color: #1f356d;
+}
+
+.service-actions-menu .delete-action {
+  color: #dc2626;
+}
+
+.service-actions-menu .delete-action i {
+  color: #dc2626;
+}
+
+.lab-actions {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.lab-actions-btn {
+  width: 48px;
+  height: 48px;
+  border: 1px solid #cbd7eb;
+  border-radius: 10px;
+  background: #fff;
+  color: #173b82;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  font-size: 20px;
+  transition: background 0.15s ease;
+}
+
+.lab-actions-btn:hover {
+  background: #f5f8fc;
+}
+
+.lab-actions-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 160px;
+
+  background: #fff;
+  border: 1px solid #e0e6ef;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(20, 40, 80, 0.14);
+
+  padding: 6px;
+  z-index: 100;
+}
+
+.lab-actions-menu button {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 11px 12px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  border-radius: 7px;
+  cursor: pointer;
+  text-align: left;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.lab-actions-menu .delete-action {
+  color: #dc2626;
+}
+
+.lab-actions-menu .delete-action:hover {
+  background: #fff1f1;
+}
+
+.lab-actions-menu .delete-action i {
+  font-size: 16px;
+}
+
+/* ==========================================================
+   DETAILS LAYOUT
+========================================================== */
+
+.catalog-details {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #edf2f7;
+  border-bottom: 1px solid #edf2f7;
+  padding: 12px 0;
+}
+
+.catalog-details-left {
+  flex: 1;
+}
+
+/* ==========================================================
+   INFORMATION ROWS
+========================================================== */
+
+.catalog-info-row {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 14px 0;
+}
+
+.catalog-label {
+  width: 150px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.catalog-value {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* ==========================================================
+   SERVICES & CHIPS
+========================================================== */
+
+.permission-services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 14px;
+}
+
+.service-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: 0.25s;
+  padding: 8px 18px;
+  font-size: 14px;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  color: #3f5370;
+}
+
+.service-chip:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+/* ==========================================================
+   LAB LIST & CARDS
+========================================================== */
+
+.labs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.catalog-lab {
+  background: #ffffff;
+  border: 1px solid #dbe4ef;
+  border-radius: 20px;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.04);
+  overflow: hidden;
+  transition: 0.25s ease;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  animation: fadeIn 0.25s ease;
+}
+
+.catalog-lab:hover {
+  transform: translateY(-3px);
+  border-color: #c7d3e3;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+}
+
+.catalog-lab[open] {
+  border-color: #2563eb;
+}
+
+.catalog-lab summary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 15px 28px;
+  min-height: 185px;
+  cursor: pointer;
+}
+
+.catalog-lab summary::-webkit-details-marker {
+  display: none;
+}
+
+.lab-number {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+  color: #1e3a8a;
+  flex-shrink: 0;
+  background: #f8fafc;
+  border: 1px solid #dbe4ef;
+}
+
+.lab-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex: 1;
+  min-width: 0;
+}
+
+.lab-main {
+  flex: 1;
+  min-width: 0;
+  max-width: 630px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+.lab-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.4;
+  overflow-wrap: break-word;
+}
+
+.lab-services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.lab-services .service-chip {
+  padding: 9px 14px;
+  font-size: 13px;
+}
+
+.lab-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-shrink: 0;
+  min-height: auto;
+}
+
+.lab-right .lab-action-btn {
+  min-width: 0;
+  max-width: none;
+  width: auto;
+  white-space: nowrap;
+  padding: 0 20px;
+}
+
+/* ==========================================================
+   CHEVRON
+========================================================== */
+
+.expand-icon {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: 0.25s ease;
+  width: 44px;
+  height: 44px;
+  background: white;
+  border: 1px solid #d8e1ec;
+}
+
+.expand-icon i {
+  color: #64748b;
+  font-size: 15px;
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+
+.catalog-lab[open] .expand-icon {
+  background: #f4f6f8;
+  border-color: #d6dde6;
+}
+
+.catalog-lab[open] .expand-icon i {
+  color: #334155;
+  transform: rotate(180deg);
+}
+
+/* ==========================================================
+   DESCRIPTION
+========================================================== */
+
+.lab-description {
+  border-top: 1px solid #eef2f7;
+  padding: 22px 30px 24px 102px;
+  background: #fafbfd;
+}
+
+.lab-description p {
+  margin: 0;
+  color: #334155;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* ==========================================================
+   SEARCH RESULTS
+========================================================== */
+
+.search-results {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.search-section {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.search-section-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e6edf5;
+}
+
+.search-section-header h3 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.no-labs-found {
+  padding: 60px 24px;
+  text-align: center;
+  color: #64748b;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* ==========================================================
+   ANIMATIONS & FOCUS STATES
+========================================================== */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.75;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.catalog-tab:focus-visible,
+.btn-square:focus-visible {
+  outline: 2px solid #334155;
+  outline-offset: 3px;
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 992px) {
+  .page-header h1 {
+    font-size: 28px;
+  }
+
+  .catalog-title-row {
+    align-items: flex-start;
+  }
+
+  .catalog-title-left {
+    align-items: flex-start;
+  }
+
+  .catalog-title-row h2 {
+    font-size: 28px;
+  }
+
+  .catalog-tab {
+    min-width: 145px;
+    height: 66px;
+  }
+}
+
+@media (max-width: 768px) {
+  .catalog-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .catalog-header .btn-square {
+    width: 100%;
+  }
+
+  .catalog-page {
+    gap: 22px;
+  }
+
+  .catalog-tabs {
+    gap: 12px;
+  }
+
+  .catalog-search {
+    max-width: 100%;
+  }
+
+  .search-section-header h3 {
+    font-size: 22px;
+  }
+
+  .catalog-tab {
+    min-width: 130px;
+    height: 62px;
+    padding: 14px 18px;
+  }
+
+  .catalog-tab-icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .catalog-tab span {
+    font-size: 15px;
+  }
+
+  .catalog-info-card {
+    padding: 24px;
+  }
+
+  .catalog-title-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+  }
+
+  .catalog-title-left {
+    align-items: flex-start;
+  }
+
+  .service-actions {
+    align-self: flex-end;
+  }
+
+  .catalog-title-row h2 {
+    font-size: 26px;
+  }
+
+  .catalog-details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .catalog-info-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .catalog-value {
+    width: 100%;
+  }
+
+  .catalog-lab summary {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .lab-left {
+    width: 100%;
+  }
+
+  .lab-right {
+    width: 100%;
+    justify-content: space-between;
+    padding-left: 68px;
+  }
+
+  .lab-description {
+    padding: 20px 22px 22px;
+  }
+}
+
+@media (max-width: 576px) {
+  .page-header h1 {
+    font-size: 26px;
+  }
+
+  .page-header p {
+    font-size: 15px;
+  }
+
+  .catalog-tab {
+    width: 100%;
+    min-width: unset;
+    justify-content: flex-start;
+  }
+
+  .catalog-tab span {
+    font-size: 14px;
+  }
+
+  .catalog-title-row h2 {
+    font-size: 22px;
+  }
+
+  .catalog-label {
+    width: auto;
+  }
+
+  .lab-number {
+    width: 46px;
+    height: 46px;
+    font-size: 16px;
+  }
+
+  .lab-title {
+    font-size: 18px;
+  }
+
+  .lab-right .lab-action-btn {
+    min-width: unset;
+    font-size: 14px;
+    height: 44px;
+  }
+}
+
+/* =========================================================
+   DELETE CONFIRMATION OVERLAY
+========================================================= */
+
+.custom-confirm-overlay {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(24, 39, 68, 0.55);
+  backdrop-filter: blur(3px);
+
+  z-index: 9999;
+}
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.custom-confirm-modal {
+  width: min(710px, calc(100vw - 40px));
+
+  background: #ffffff;
+  border-radius: 16px;
+
+  box-shadow: 0 20px 55px rgba(15, 35, 70, 0.25);
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.custom-confirm-title {
+  margin: 0;
+  padding: 36px 48px 10px;
+
+  color: #132b55;
+
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+.custom-confirm-message {
+  margin: 0;
+  padding: 0 48px;
+
+  color: #526a8d;
+
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   WARNING
+========================================================= */
+
+.custom-confirm-warning {
+  margin: 12px 0 0;
+  padding: 0 48px;
+
+  color: #526a8d;
+
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   CONFIRMATION LABEL
+========================================================= */
+
+.custom-confirm-label {
+  display: block;
+
+  margin: 15px 48px 9px;
+
+  color: #526a8d;
+
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.custom-confirm-label strong {
+  color: #162b50;
+  font-weight: 700;
+}
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.custom-confirm-input {
+  display: block;
+
+  width: calc(100% - 96px);
+  height: 48px;
+
+  margin: 0 48px;
+
+  padding: 0 14px;
+
+  box-sizing: border-box;
+
+  border: 1.5px solid #4c82f1;
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #182b4d;
+
+  font-size: 16px;
+
+  outline: none;
+
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.custom-confirm-input::placeholder {
+  color: #9aa9bd;
+}
+
+.custom-confirm-input:focus {
+  border-color: #356fe0;
+
+  box-shadow: 0 0 0 3px rgba(53, 111, 224, 0.1);
+}
+
+/* =========================================================
+   ACTION AREA
+========================================================= */
+
+.custom-confirm-actions {
+  display: flex;
+
+  justify-content: flex-end;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 28px;
+  padding: 22px 48px 28px;
+
+  border-top: 1px solid #e3e8f0;
+}
+
+/* =========================================================
+   CANCEL
+========================================================= */
+
+.custom-confirm-cancel {
+  min-width: 100px;
+  height: 44px;
+
+  padding: 0 20px;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #354c70;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.custom-confirm-cancel:hover {
+  background: #f8fafc;
+  border-color: #b8c5d8;
+}
+
+/* =========================================================
+   DELETE
+========================================================= */
+
+.custom-confirm-delete {
+  min-width: 130px;
+  height: 44px;
+  padding: 0 22px;
+  border: none;
+  border-radius: 8px;
+  background: #28427f;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    opacity 0.15s ease;
+}
+
+.custom-confirm-delete:hover:not(:disabled) {
+  background: #1d3d92;
+}
+
+/* =========================================================
+   DISABLED DELETE
+========================================================= */
+
+.custom-confirm-delete:disabled {
+  background: #c5d0e2;
+
+  color: #f8fafc;
+
+  cursor: not-allowed;
+}

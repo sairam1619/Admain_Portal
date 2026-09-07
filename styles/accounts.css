@@ -1,0 +1,444 @@
+/* =======================================================
+   ACCOUNT POOL PAGE
+======================================================= */
+
+.accounts-section {
+  margin-top: 34px;
+}
+
+/* =======================================================
+   HEALTH SECTION
+======================================================= */
+
+.account-health-grid {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 28px;
+  margin-bottom: 32px;
+}
+
+.capacity-card {
+  background: white;
+  border-radius: 28px;
+  border: 1px solid #e2e8f0;
+  padding: 20px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.05);
+}
+
+.capacity-ring {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.capacity-ring-inner {
+  width: 170px;
+  height: 170px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 0 1px #e2e8f0;
+}
+
+.capacity-percent {
+  font-size: 42px;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1;
+}
+
+.capacity-text {
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.capacity-footer {
+  margin-top: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #334155;
+}
+
+.ring-legend {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 16px;
+  width: 100%;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #475569;
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+/* =======================================================
+   HEALTH PANEL
+======================================================= */
+
+.pool-health-card {
+  background: white;
+  border-radius: 28px;
+  border: 1px solid #e2e8f0;
+  padding: 20px 30px;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.05);
+}
+
+.pool-health-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 16px;
+}
+
+.health-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.health-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #475569;
+}
+
+.health-value {
+  font-size: 24px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.health-divider {
+  height: 1px;
+  background: #e2e8f0;
+  margin: 10px 0;
+}
+
+.health-total {
+  font-size: 30px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.total-row {
+  padding-top: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+/* =======================================================
+   STATUS COLORS
+======================================================= */
+
+.available-dot {
+  background: #22c55e;
+}
+
+.active-dot {
+  background: #2563eb;
+}
+
+.assigning-dot {
+  background: #7c3aed;
+}
+
+.cleaning-dot {
+  background: #f59e0b;
+}
+
+.quarantined-dot {
+  background: #ef4444;
+}
+
+/* =======================================================
+   INVENTORY SECTION
+======================================================= */
+
+.accounts-toolbar {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.accounts-search {
+  flex: 1;
+  min-width: 320px;
+  height: 56px;
+  padding: 0 18px;
+  border: 1px solid #dbe4f0;
+  border-radius: 18px;
+  background: white;
+  font-size: 15px;
+  font-weight: 600;
+  color: #334155;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.accounts-search:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+/* =======================================================
+   CUSTOM STATUS FILTER
+======================================================= */
+
+.custom-filter {
+  position: relative;
+}
+
+.custom-filter-btn {
+  min-width: 220px;
+  height: 56px;
+  padding: 0 18px;
+  border: 1px solid #dbe4f0;
+  border-radius: 18px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  color: #334155;
+  transition: 0.2s ease;
+}
+
+.custom-filter-btn:hover {
+  border-color: #cbd5e1;
+}
+
+.custom-filter-btn:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+.custom-filter-menu {
+  position: absolute;
+  top: 64px;
+  right: 0;
+  min-width: 220px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  overflow: hidden;
+  z-index: 100;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+}
+
+.custom-filter-option {
+  width: 100%;
+  border: none;
+  background: white;
+  padding: 14px 18px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+
+.custom-filter-option:hover {
+  background: #f8fafc;
+  color: #2563eb;
+}
+
+.filter-arrow {
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* =======================================================
+   TABLE
+======================================================= */
+
+.accounts-table {
+  width: 100%;
+  min-width: 1300px;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.accounts-table th {
+  background: #f8fafc;
+  color: #64748b;
+  padding: 16px 20px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  text-align: left;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.accounts-table th:first-child {
+  border-top-left-radius: 20px;
+}
+
+.accounts-table th:last-child {
+  border-top-right-radius: 20px;
+}
+
+.accounts-table td {
+  padding: 20px;
+  border-bottom: 1px solid #eef2f7;
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+}
+
+.accounts-table tbody tr {
+  transition: 0.2s ease;
+}
+
+.accounts-table tbody tr:hover {
+  background: #f8fbff;
+}
+
+.accounts-table td:first-child {
+  font-family: monospace;
+  color: #334155;
+}
+
+.accounts-table td:nth-child(2) {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.accounts-table td:nth-child(5) {
+  min-width: 320px;
+  max-width: 450px;
+  word-break: break-word;
+  line-height: 1.6;
+}
+
+/* =======================================================
+   STATUS BADGES
+======================================================= */
+
+.account-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  height: 34px;
+  padding: 0 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.account-status.available {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.account-status.active {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.account-status.assigning {
+  background: #ede9fe;
+  color: #6d28d9;
+}
+
+.account-status.cleaning {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.account-status.quarantined {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+/* =======================================================
+   EMPTY
+======================================================= */
+
+.accounts-empty {
+  background: white;
+  border: 1px dashed #cbd5e1;
+  border-radius: 24px;
+  padding: 80px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #64748b;
+}
+
+/* =======================================================
+   MOBILE
+======================================================= */
+
+@media (max-width: 1100px) {
+  .account-health-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .accounts-toolbar {
+    flex-direction: column;
+  }
+
+  .accounts-search,
+  .custom-filter-btn {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .capacity-ring {
+    width: 200px;
+    height: 200px;
+  }
+
+  .capacity-ring-inner {
+    width: 140px;
+    height: 140px;
+  }
+
+  .health-value {
+    font-size: 20px;
+  }
+}

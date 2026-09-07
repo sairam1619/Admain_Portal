@@ -1,0 +1,1130 @@
+/* ======================================================
+   ANALYTICS PAGE
+====================================================== */
+
+.analytics-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ======================================================
+   HEADER
+====================================================== */
+
+.analytics-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.analytics-subtitle {
+  margin-top: 4px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* ======================================================
+   ANALYTICS OVERVIEW
+====================================================== */
+
+.analytics-overview {
+  position: relative;
+  overflow: hidden;
+  padding: 32px 40px;
+  background: linear-gradient(135deg, #041f63 0%, #06256f 50%, #082a79 100%);
+  border-radius: 28px;
+  border-top: 3px solid rgba(255, 255, 255, 0.12);
+  color: white;
+}
+
+.analytics-overview h2 {
+  margin: 0 0 28px;
+  font-size: 34px;
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 48px;
+  position: relative;
+  z-index: 2;
+}
+
+.overview-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.overview-item strong {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.overview-bullet {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 18px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.analytics-watermark {
+  position: absolute;
+  right: 24px;
+  top: 60%;
+  transform: translateY(-50%);
+  font-size: 110px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.025);
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (max-width: 900px) {
+  .overview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .overview-grid::before {
+    display: none;
+  }
+
+  .analytics-watermark {
+    display: none;
+  }
+
+  .analytics-overview {
+    padding: 28px;
+  }
+
+  .analytics-overview h2 {
+    font-size: 28px;
+  }
+}
+
+/* ======================================================
+   CARDS
+====================================================== */
+
+.analytics-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+}
+
+/* ======================================================
+   USAGE TREND LAYOUT
+====================================================== */
+
+.usage-trend-layout {
+  display: grid;
+  grid-template-columns: 72% 28%;
+  align-items: start;
+}
+
+.usage-trend-section {
+  padding-right: 32px;
+  border-right: 1px solid #e2e8f0;
+  min-width: 0;
+}
+
+/* ======================================================
+   USAGE HEADER
+====================================================== */
+
+.usage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.usage-header h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.usage-header p {
+  margin-top: 8px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #64748b;
+}
+
+.usage-header strong {
+  color: #1d4ed8;
+  font-weight: 700;
+}
+
+/* ======================================================
+   TOP LEARNERS
+====================================================== */
+
+.top-learners-card {
+  padding-left: 28px;
+}
+
+.top-learners-card h3 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.top-learners-card p {
+  margin: 6px 0 0;
+  font-size: 15px;
+  color: #64748b;
+}
+
+.top-learners-header {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 12px;
+  margin-top: 28px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #94a3b8;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.top-learner-row {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 12px;
+  align-items: center;
+  padding: 22px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.learner-main {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.learner-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.learner-count {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.learner-hours {
+  text-align: right;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.top-learner-row:last-child {
+  border-bottom: none;
+}
+
+/* ======================================================
+   AVATAR COLORS
+====================================================== */
+
+.learner-avatar {
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.avatar-1 {
+  background: #ede9fe;
+  color: #6d28d9;
+}
+
+.avatar-2 {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.avatar-3 {
+  background: #fef3c7;
+  color: #f59e0b;
+}
+
+.avatar-4 {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.avatar-5 {
+  background: #fce7f3;
+  color: #db2777;
+}
+
+.hours-1 {
+  color: #4f46e5;
+}
+
+.hours-2 {
+  color: #16a34a;
+}
+
+.hours-3 {
+  color: #f59e0b;
+}
+
+.hours-4 {
+  color: #2563eb;
+}
+
+.hours-5 {
+  color: #db2777;
+}
+
+/* ======================================================
+   USAGE SUMMARY
+====================================================== */
+
+.usage-summary {
+  margin-top: 28px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 22px 26px;
+}
+
+.summary-card {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.summary-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: #eef2ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.summary-content span {
+  display: block;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.summary-content strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.summary-divider {
+  width: 1px;
+  height: 60px;
+  background: #e2e8f0;
+  margin: 0 30px;
+}
+
+/* ======================================================
+   TREND DROPDOWN
+====================================================== */
+
+.trend-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 210px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow:
+    0 10px 15px rgba(15, 23, 42, 0.08),
+    0 4px 6px rgba(15, 23, 42, 0.04);
+  z-index: 100;
+}
+
+.trend-option {
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.trend-option:hover {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.trend-option:not(:last-child) {
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.trend-dropdown {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.trend-dropdown-btn:hover {
+  border-color: #bfdbfe;
+  background: #f8fbff;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+}
+
+.trend-dropdown-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  min-width: 210px;
+  height: 48px;
+  padding: 0 18px;
+  background: #ffffff;
+  border: 1px solid #dbe2ea;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.trend-dropdown-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.trend-dropdown-left .bi-calendar3 {
+  font-size: 18px;
+  color: #334155;
+}
+
+.trend-dropdown-btn .bi-chevron-down {
+  font-size: 12px;
+  color: #64748b;
+  transition: transform 0.2s ease;
+}
+
+.trend-dropdown-btn:hover .bi-chevron-down {
+  transform: translateY(1px);
+}
+
+/* ======================================================
+   TREND CHART
+====================================================== */
+
+.recharts-wrapper {
+  font-size: 13px;
+}
+
+.recharts-cartesian-grid-horizontal line {
+  stroke: #eef2f7;
+}
+
+.recharts-cartesian-axis-line {
+  stroke: #e2e8f0;
+}
+
+.recharts-cartesian-axis-tick-line {
+  stroke: #e2e8f0;
+}
+
+.analytics-card .recharts-responsive-container {
+  margin-top: 8px;
+}
+
+.recharts-cartesian-axis-tick-value {
+  fill: #64748b;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.recharts-tooltip-wrapper {
+  outline: none;
+}
+
+.recharts-default-tooltip {
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 12px !important;
+  background: #ffffff !important;
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.08) !important;
+  padding: 10px 14px !important;
+}
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+
+@media (max-width: 1024px) {
+  .usage-trend-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .usage-trend-section {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .top-learners-card {
+    border-top: 1px solid #e2e8f0;
+    padding-left: 0;
+    padding-top: 24px;
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .usage-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .trend-dropdown {
+    width: 100%;
+  }
+
+  .trend-dropdown-btn {
+    width: 100%;
+  }
+
+  .trend-dropdown-menu {
+    width: 100%;
+  }
+
+  .top-learners-header {
+    display: none;
+  }
+
+  .learner-info {
+    flex-direction: column;
+
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .learner-labs,
+  .learner-hours {
+    width: auto;
+    text-align: left;
+  }
+
+  .usage-summary {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .summary-divider {
+    display: none;
+  }
+}
+
+/* ======================================================
+   SECTION DISTRIBUTION + TOP LABS
+====================================================== */
+
+.distribution-layout {
+  display: grid;
+  grid-template-columns: 480px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.distribution-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ======================================================
+   DONUT CHART
+====================================================== */
+
+.distribution-chart {
+  position: relative;
+  width: 100%;
+  height: 420px;
+}
+
+.donut-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+}
+
+.donut-total {
+  font-size: 56px;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1;
+}
+
+.donut-label {
+  margin-top: 2px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #64748b;
+}
+
+/* ======================================================
+   LEGEND BELOW DONUT
+====================================================== */
+
+.distribution-legend {
+  width: 100%;
+  max-width: 420px;
+  margin-top: -8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px 18px;
+}
+
+.legend-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+.legend-chip:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legend-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* ======================================================
+   TOP LABS PANEL
+====================================================== */
+
+.top-labs-panel {
+  border-left: 1px solid #e2e8f0;
+  padding-left: 40px;
+}
+
+.top-labs-panel h3 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.top-labs-subtitle {
+  margin: 8px 0 28px;
+  font-size: 15px;
+  color: #64748b;
+}
+
+/* ======================================================
+   LAB ROW
+====================================================== */
+
+.top-lab-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid #eef2f7; /* subtle outline */
+  transition: all 0.25s ease;
+}
+
+.top-lab-row:hover {
+  transform: translateY(-2px);
+  border-color: #dbe4f0;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+}
+
+.top-lab-row:hover {
+  transform: translateY(-2px);
+  background: #f8fafc;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+}
+
+.top-lab-row:not(:last-child) {
+  margin-bottom: 6px;
+}
+
+/* ======================================================
+   LEFT SIDE
+====================================================== */
+
+.top-lab-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  flex: 1;
+  min-width: 0;
+}
+
+/* ======================================================
+   RANK BADGE
+====================================================== */
+
+.rank {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 800;
+  flex-shrink: 0;
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.25);
+}
+
+/* ======================================================
+   LAB NAME
+====================================================== */
+
+.lab-name {
+  color: #0f172a;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.7;
+  max-width: 620px;
+}
+
+/* ======================================================
+   RIGHT SIDE
+====================================================== */
+
+.launch-count {
+  width: 44px;
+  height: 44px;
+  font-size: 22px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eff6ff; /* very light blue */
+  border: 1px solid #dbeafe;
+  font-weight: 800;
+  color: #2563eb;
+  flex-shrink: 0;
+}
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+
+@media (max-width: 1100px) {
+  .distribution-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .top-labs-panel {
+    border-left: none;
+    border-top: 1px solid #e2e8f0;
+    padding-left: 0;
+    padding-top: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .distribution-chart {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .donut-total {
+    font-size: 42px;
+  }
+
+  .distribution-legend {
+    gap: 10px 14px;
+  }
+
+  .legend-chip {
+    padding: 5px 8px;
+  }
+
+  .top-lab-left {
+    gap: 12px;
+  }
+
+  .lab-name {
+    font-size: 14px;
+  }
+}
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+
+@media (max-width: 1024px) {
+  .distribution-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .distribution-chart {
+    margin: 0 auto;
+  }
+
+  .distribution-legend {
+    min-width: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .distribution-chart {
+    width: 100%;
+  }
+
+  .donut-total {
+    font-size: 42px;
+  }
+
+  .legend-right {
+    gap: 16px;
+  }
+}
+
+/* ======================================================
+   LABS INSIDE PERMISSION SETS
+====================================================== */
+.analytics-card .card-header h2 {
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: #0f172a;
+}
+
+.analytics-card .card-header p {
+  margin-top: 8px;
+  font-size: 17px;
+  color: #64748b;
+}
+
+/* ======================================================
+   LABS INSIDE PERMISSION SETS
+====================================================== */
+
+.permission-card {
+  position: relative;
+  background: linear-gradient(180deg, #ffffff, #f8fafc);
+  border: 1px solid #dbe4ee;
+  border-radius: 22px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+.permission-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background: #64748b;
+  border-radius: 6px 0 0 6px;
+}
+
+.permission-card:last-child {
+  margin-bottom: 0;
+}
+
+.permission-card:hover {
+  transform: translateY(-2px);
+  border-color: #cbd5e1;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+}
+
+.permission-card[open] {
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
+}
+
+/* ======================================================
+   HEADER
+====================================================== */
+
+.permission-card summary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 18px 28px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.permission-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.permission-card summary:hover {
+  background: rgba(248, 250, 252, 0.7);
+}
+
+.permission-card[open] summary {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* ======================================================
+   PERMISSION SET NAME
+====================================================== */
+
+.permission-title {
+  flex: 1;
+  color: #0f172a;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  line-height: 1.3;
+}
+
+/* ======================================================
+   LAUNCHES BADGE
+====================================================== */
+
+.permission-launches {
+  min-width: 90px;
+  padding: 8px 14px;
+  text-align: center;
+  border-radius: 14px;
+  background: #e2e8f0;
+  border: 1px solid #cbd5e1;
+  color: #334155;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ======================================================
+   LAB LIST
+====================================================== */
+
+.permission-labs {
+  padding: 4px 28px 12px;
+}
+
+/* ======================================================
+   LAB ROW
+====================================================== */
+
+.permission-lab {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 0;
+  border-top: 1px solid #edf2f7;
+}
+
+.permission-lab:first-child {
+  border-top: none;
+}
+
+/* ======================================================
+   RANK
+====================================================== */
+
+.lab-rank {
+  width: 24px;
+  flex-shrink: 0;
+  color: #94a3b8;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* ======================================================
+   LAB NAME
+====================================================== */
+
+.permission-lab-name {
+  flex: 1;
+  color: #1e293b;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+/* ======================================================
+   LAB COUNT
+====================================================== */
+
+.permission-lab-count {
+  min-width: 32px;
+  text-align: right;
+  color: #475569;
+  font-size: 14px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+
+@media (max-width: 768px) {
+  .permission-card summary {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 20px;
+  }
+
+  .permission-launches {
+    align-self: flex-start;
+  }
+
+  .permission-title {
+    font-size: 18px;
+  }
+
+  .permission-lab {
+    gap: 14px;
+  }
+
+  .permission-labs {
+    padding: 4px 20px 12px;
+  }
+}
+
+/* ======================================================
+   MOBILE
+====================================================== */
+
+@media (max-width: 768px) {
+  .permission-card summary {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .permission-launches {
+    width: 100%;
+  }
+
+  .permission-lab {
+    align-items: flex-start;
+  }
+
+  .permission-lab-count {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+/* ======================================================
+   BOTTOM GRID
+====================================================== */
+
+.analytics-bottom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+/* ======================================================
+   LOADING / ERROR
+====================================================== */
+
+.loading,
+.error {
+  padding: 40px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.error {
+  color: #dc2626;
+}
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+
+@media (max-width: 1200px) {
+  .analytics-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .overview-content {
+    grid-template-columns: 1fr;
+  }
+
+  .distribution-layout {
+    flex-direction: column;
+  }
+
+  .distribution-chart {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .analytics-header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .card-header h2 {
+    font-size: 24px;
+  }
+
+  .overview-watermark {
+    display: none;
+  }
+}

@@ -1,0 +1,2132 @@
+/* =========================================
+   ADD LAB PAGE & LAYOUT
+========================================= */
+.add-lab-page {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 2px;
+  color: #0f172a;
+}
+.add-lab-top {
+  display: flex;
+  align-items: center;
+}
+.add-lab-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #475569;
+}
+.add-lab-breadcrumb strong {
+  color: #0e265b;
+}
+.add-lab-breadcrumb-separator {
+  color: #94a3b8;
+  font-size: 18px;
+  line-height: 1;
+}
+.add-lab-title-area {
+  width: 100%;
+  margin-top: 6px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 30px;
+}
+.add-lab-title-content {
+  flex: 1;
+  min-width: 0;
+}
+.add-lab-title-content h1 {
+  margin: 0;
+  color: #0e265b;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.add-lab-title-content p {
+  margin: 7px 0 0;
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.add-lab-draft-button {
+  color: #0e265b;
+  height: 42px;
+  margin-top: 2px;
+  padding: 0 20px;
+  border: 1px solid #193674;
+  border-radius: 7px;
+  background: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+.add-lab-draft-button:hover {
+  background: #f1f5fb;
+  border-color: #0e265b;
+  box-shadow: 0 3px 9px rgba(14, 38, 91, 0.1);
+  transform: translateY(-1px);
+}
+
+/* =========================================
+   STEPPER
+========================================= */
+.add-lab-stepper {
+  width: 78%;
+  margin: 26px auto 32px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.add-lab-step-item {
+  min-width: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #64748b;
+}
+.add-lab-step-circle {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #cbd5e1;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #193674;
+  font-size: 17px;
+  font-weight: 600;
+  box-sizing: border-box;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+.add-lab-step-label {
+  margin-top: 9px;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition:
+    color 0.25s ease,
+    font-weight 0.25s ease;
+}
+.add-lab-step-item.active .add-lab-step-circle {
+  border-color: #0e265b;
+  background: linear-gradient(
+    145deg,
+    #244886 0%,
+    #193674 42%,
+    #0e265b 72%,
+    #091b43 100%
+  );
+  color: #ffffff;
+  box-shadow:
+    0 4px 12px rgba(14, 38, 91, 0.3),
+    0 0 0 3px rgba(25, 54, 116, 0.08),
+    inset 0 1px 2px rgba(255, 255, 255, 0.18);
+  transform: translateY(-1px);
+}
+.add-lab-step-item.active .add-lab-step-label {
+  color: #0e265b;
+  font-weight: 700;
+}
+.add-lab-step-line {
+  flex: 1;
+  height: 1px;
+  margin: 25px 10px 0;
+  background: #d8e0eb;
+}
+
+/* =========================================
+   STEP CONTENT CONTAINER & CARD
+========================================= */
+.add-lab-step-content,
+.add-lab-form-content,
+.add-lab-form-section {
+  width: 100%;
+}
+.add-lab-step-card {
+  width: 100%;
+  padding: 22px;
+  background: #ffffff;
+  border: 1px solid #d8e0eb;
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgba(15, 23, 42, 0.045);
+  box-sizing: border-box;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.add-lab-section-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.add-lab-section-number {
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(
+    145deg,
+    #244886 0%,
+    #193674 42%,
+    #0e265b 72%,
+    #091b43 100%
+  );
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow:
+    0 3px 8px rgba(14, 38, 91, 0.22),
+    inset 0 1px 2px rgba(255, 255, 255, 0.15);
+}
+.add-lab-section-header h2 {
+  margin: 0;
+  color: #0e265b;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 700;
+}
+.add-lab-section-header p {
+  margin: 4px 0 0;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.add-lab-form-section-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #102a63;
+  margin-bottom: 26px;
+}
+
+/* =========================================
+   FORM GRIDS & LAYOUT
+========================================= */
+.add-lab-form-grid {
+  display: grid;
+  grid-template-columns: 0.6fr 1.4fr;
+  gap: 20px;
+  margin-bottom: 26px;
+  align-items: start;
+}
+.add-lab-two-column-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+  align-items: start;
+}
+.add-lab-form-column {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.add-lab-form-column > .add-lab-field + .add-lab-field {
+  margin-top: 24px;
+}
+
+/* =========================================
+   FIELDS & INPUT CONTROLS
+========================================= */
+.add-lab-field {
+  position: relative;
+  width: 100%;
+  margin-bottom: 8px;
+}
+.add-lab-field label {
+  display: block;
+  margin-bottom: 9px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #102a63;
+}
+.add-lab-field .required {
+  color: #ef4444;
+  margin-left: 3px;
+}
+.add-lab-field input,
+.add-lab-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #cfd9ea;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #102a63;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 12px 14px;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+.add-lab-field input {
+  height: 44px;
+}
+.add-lab-field textarea {
+  min-height: 180px;
+  resize: vertical;
+  line-height: 1.6;
+}
+.add-lab-field input::placeholder,
+.add-lab-field textarea::placeholder {
+  color: #7b8baa;
+}
+.add-lab-field input:focus,
+.add-lab-field textarea:focus {
+  border-color: #1d4ed8;
+  box-shadow: 0 0 0 2px rgba(29, 78, 216, 0.08);
+}
+.add-lab-readonly-field {
+  width: 100%;
+  height: 44px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  border: 1px solid #cfd9ea;
+  border-radius: 6px;
+  background: #f8fafc;
+  color: #102a63;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: default;
+}
+
+/* =========================================
+   EDIT LAB - READONLY LAB NAME
+========================================= */
+
+.add-lab-name-field input.add-lab-readonly-field {
+  width: 100%;
+  height: 44px;
+  box-sizing: border-box;
+  padding: 0 14px;
+
+  background: #f8fafc;
+  border: 1px solid #cfd9ea;
+  border-radius: 6px;
+
+  color: #102a63;
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: not-allowed;
+}
+
+.add-lab-character-count {
+  position: absolute;
+  right: 12px;
+  bottom: 10px;
+  font-size: 12px;
+  color: #6b7da3;
+  pointer-events: none;
+}
+
+/* =========================================
+   SUBTITLE & OVERVIEW CUSTOM TEXTAREAS
+========================================= */
+
+.add-lab-field textarea.add-lab-subtitle-textarea,
+.add-lab-subtitle-textarea {
+  height: 70px !important;
+  min-height: 70px !important;
+  max-height: 70px !important;
+  padding: 10px 14px;
+  line-height: 24px;
+  resize: none !important;
+  overflow: hidden;
+  text-align: justify;
+}
+
+.add-lab-field textarea.add-lab-subtitle-textarea::placeholder {
+  text-align: left;
+}
+
+/* =========================================
+   ADD LAB - OVERVIEW
+========================================= */
+
+.add-lab-two-column-layout
+  .add-lab-form-column:last-child
+  .add-lab-field:first-child
+  textarea {
+  height: 136px;
+  min-height: 136px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+/* =========================================
+   EDIT LAB - OVERVIEW
+========================================= */
+
+.add-lab-two-column-layout
+  .add-lab-form-column:last-child
+  .add-lab-field:first-child
+  .edit-lab-overview-textarea {
+  height: 200px;
+  min-height: 200px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+/* =========================================
+   LEARNING OBJECTIVES
+========================================= */
+.add-lab-objectives-field {
+  width: 100%;
+}
+.add-lab-objectives-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.edit-lab-objectives-list .add-lab-objective-textarea {
+  min-height: 70px;
+}
+
+.add-lab-objective-item {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  min-height: 40px;
+  border: 1px solid #cfd9ea;
+  border-radius: 6px;
+  background: #ffffff;
+  box-sizing: border-box;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.add-lab-objective-item:focus-within {
+  border-color: #1d4ed8;
+  box-shadow: 0 0 0 2px rgba(29, 78, 216, 0.08);
+}
+.add-lab-objective-item textarea {
+  flex: 1;
+  width: 100%;
+  height: 40px;
+  min-height: 40px;
+  max-height: 82px;
+  box-sizing: border-box;
+  border: none !important;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none !important;
+  padding: 8px 6px;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 22px;
+  color: #102a63;
+  outline: none;
+  resize: none;
+  overflow: hidden;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  text-align: justify;
+}
+.add-lab-objective-item textarea::placeholder {
+  color: #7b8baa;
+  text-align: left;
+}
+.add-lab-drag-handle {
+  width: 30px;
+  min-width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #5270a8;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: grab;
+  user-select: none;
+  padding-top: 10px;
+}
+.add-lab-remove-button {
+  width: 34px;
+  height: 34px;
+  margin-right: 4px;
+  border: none;
+  background: transparent;
+  color: #ef4444;
+  font-size: 22px;
+  font-weight: 400;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+.add-lab-remove-button:hover {
+  background: #fff1f2;
+  color: #dc2626;
+}
+.add-lab-add-objective-button {
+  width: 100%;
+  height: 40px;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px dashed #b9c9e4;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #0f45b5;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+.add-lab-add-objective-button span {
+  font-size: 21px;
+  line-height: 1;
+}
+.add-lab-add-objective-button:hover {
+  background: #f5f8ff;
+  border-color: #1d4ed8;
+}
+
+/* =========================================
+   AWS SERVICES
+========================================= */
+.add-lab-services-field {
+  width: 100%;
+}
+.add-lab-service-input-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 8px;
+}
+.add-lab-service-input-row input {
+  flex: 1;
+  min-width: 0;
+}
+.add-lab-service-add-button {
+  height: 44px;
+  padding: 0 20px;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 6px;
+  background: #123a83;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.1s ease;
+}
+.add-lab-service-add-button:hover {
+  background: #0d2f6d;
+}
+.add-lab-service-add-button:active {
+  transform: translateY(1px);
+}
+.add-lab-service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+.add-lab-service-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 34px;
+  padding: 0 10px;
+  border: 1px solid #c9d6eb;
+  border-radius: 8px;
+  background: #f5f8fd;
+  color: #123a83;
+  font-size: 13px;
+  font-weight: 500;
+}
+.add-lab-service-tag button {
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #526b96;
+  font-size: 17px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add-lab-service-tag button:hover {
+  color: #dc2626;
+}
+.add-lab-service-count {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #60749b;
+}
+
+/* =========================================
+   DOCUMENTATION URL
+========================================= */
+.add-lab-documentation-field {
+  width: 100%;
+}
+.add-lab-field input[type="url"] {
+  padding: 0 13px;
+  font-weight: 400;
+}
+.add-lab-field input[type="url"]::placeholder {
+  color: #94a3b8;
+}
+.add-lab-field input[type="url"]:hover {
+  border-color: #9fb0c9;
+}
+
+/* =========================================
+   NAVIGATION BUTTONS (PREV / NEXT / CREATE)
+========================================= */
+.add-lab-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 16px;
+}
+.add-lab-previous-button,
+.add-lab-next-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 38px;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.add-lab-previous-button {
+  min-width: 105px;
+  padding: 0 16px;
+  background: #ffffff;
+  border: 1px solid #9fb0c9;
+  color: #193674;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+.add-lab-previous-button:hover {
+  background: #f1f5fb;
+  border-color: #193674;
+  color: #0e265b;
+  box-shadow: 0 2px 7px rgba(14, 38, 91, 0.08);
+  transform: translateY(-1px);
+}
+.add-lab-next-button {
+  margin-left: auto;
+  min-width: 90px;
+  padding: 0 18px;
+  border: 1px solid #0e265b;
+  background: linear-gradient(
+    145deg,
+    #244886 0%,
+    #193674 42%,
+    #0e265b 72%,
+    #091b43 100%
+  );
+  color: #ffffff;
+  box-shadow:
+    0 3px 8px rgba(14, 38, 91, 0.2),
+    inset 0 1px 2px rgba(255, 255, 255, 0.12);
+  transition:
+    background 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+.add-lab-next-button:hover {
+  background: linear-gradient(
+    145deg,
+    #2b528f 0%,
+    #1e3d78 42%,
+    #132e68 72%,
+    #0b204d 100%
+  );
+  box-shadow:
+    0 5px 12px rgba(14, 38, 91, 0.28),
+    inset 0 1px 2px rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+}
+.add-lab-previous-button span,
+.add-lab-next-button span {
+  font-size: 15px;
+  line-height: 1;
+}
+
+.add-lab-create-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 38px;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.add-lab-create-button {
+  margin-left: auto;
+  min-width: 90px;
+  padding: 0 18px;
+  border: 1px solid #0e265b;
+  background: linear-gradient(
+    145deg,
+    #244886 0%,
+    #193674 42%,
+    #0e265b 72%,
+    #091b43 100%
+  );
+  color: #ffffff;
+  box-shadow:
+    0 3px 8px rgba(14, 38, 91, 0.2),
+    inset 0 1px 2px rgba(255, 255, 255, 0.12);
+  transition:
+    background 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+.add-lab-create-button:hover {
+  background: linear-gradient(
+    145deg,
+    #2b528f 0%,
+    #1e3d78 42%,
+    #132e68 72%,
+    #0b204d 100%
+  );
+  box-shadow:
+    0 5px 12px rgba(14, 38, 91, 0.28),
+    inset 0 1px 2px rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+}
+.add-lab-create-button span {
+  font-size: 15px;
+  line-height: 1;
+}
+
+/* =========================================
+   STEP 2 - SECTIONS
+========================================= */
+.add-lab-sections-step {
+  padding-bottom: 22px;
+}
+.add-lab-sections-container {
+  width: 100%;
+}
+.add-lab-section-card {
+  width: 100%;
+  margin-bottom: 14px;
+  border: 1px solid #d8e0eb;
+  border-radius: 8px;
+  background: #ffffff;
+  overflow: hidden;
+}
+.add-lab-section-card-header {
+  min-height: 48px;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  border-bottom: 1px solid #e2e8f0;
+  background: #ffffff;
+  cursor: pointer;
+}
+.add-lab-section-card-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #102a63;
+  font-size: 14px;
+}
+.add-lab-section-card-title .add-lab-drag-handle {
+  padding: 0;
+  width: 18px;
+  min-width: 18px;
+  font-size: 16px;
+}
+.add-lab-section-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.add-lab-delete-text-button {
+  border: none;
+  background: transparent;
+  margin-right: 12px;
+  color: #ef4444;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.add-lab-delete-text-button:hover {
+  color: #dc2626;
+}
+.add-lab-collapse-button {
+  width: 25px;
+  height: 25px;
+  border: none;
+  background: transparent;
+  color: #17376f;
+  font-size: 17px;
+  cursor: pointer;
+}
+.add-lab-section-card-body {
+  padding: 16px;
+  margin-top: 5px;
+}
+.add-lab-section-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  padding-bottom: 18px;
+}
+.add-lab-subsection-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.add-lab-subsection-icon {
+  width: 24px;
+  min-width: 24px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 1px;
+  color: #123a83;
+  font-size: 20px;
+  line-height: 1;
+}
+.add-lab-subsection-icon i {
+  font-size: 20px;
+  line-height: 1;
+}
+.add-lab-subsection-heading h3 {
+  margin: 0;
+  color: #102a63;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.add-lab-subsection-heading p {
+  margin: 5px 0 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.add-lab-section-details {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.add-lab-input-with-count {
+  position: relative;
+}
+.add-lab-input-with-count input {
+  padding-right: 55px !important;
+  margin-bottom: 3px;
+}
+.add-lab-input-with-count span,
+.add-lab-textarea-count span {
+  position: absolute;
+  right: 10px;
+  bottom: 8px;
+  color: #64748b;
+  font-size: 10px;
+  pointer-events: none;
+}
+.add-lab-input-with-count span {
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+}
+.add-lab-textarea-count {
+  position: relative;
+}
+.add-lab-textarea-count textarea {
+  width: 100%;
+  min-height: 92px !important;
+  height: 92px !important;
+  padding: 12px 45px 25px 12px !important;
+  resize: none !important;
+  overflow-y: auto;
+}
+.add-lab-section-summary-right .add-lab-subsection-heading {
+  margin-bottom: 12px;
+}
+.add-lab-section-summary-right .add-lab-subsection-heading h3 {
+  margin: 0;
+  color: #102a63;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.add-lab-section-summary-right .add-lab-subsection-heading p {
+  margin: 4px 0 0;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.4;
+}
+.add-lab-tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.add-lab-task-item {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #cfd9ea;
+  border-radius: 6px;
+  background: #ffffff;
+  overflow: hidden;
+}
+.add-lab-task-drag-area {
+  width: 36px;
+  min-width: 36px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #e2e8f0;
+}
+.add-lab-task-drag-area .add-lab-drag-handle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  color: #123a83;
+  font-size: 17px;
+  line-height: 1;
+  cursor: grab;
+}
+.add-lab-task-number {
+  width: 38px;
+  min-width: 38px;
+  padding-left: 10px;
+  color: #102a63;
+  font-size: 12px;
+  font-weight: 600;
+}
+.add-lab-task-item textarea {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  height: 40px;
+  min-height: 40px;
+  max-height: 72px;
+  padding: 10px 8px;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent;
+  color: #102a63;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 20px;
+  resize: none;
+  overflow-y: hidden;
+}
+.add-lab-task-delete {
+  width: 38px;
+  height: 38px;
+  margin-right: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  color: #ef4444;
+  font-size: 15px;
+  cursor: pointer;
+}
+.add-lab-task-delete:hover {
+  background: #fff1f2;
+}
+.add-lab-add-task-button {
+  width: 100%;
+  height: 38px;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #cfd9ea;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #0f45b5;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.add-lab-add-task-button:hover {
+  background: #f5f8ff;
+}
+.add-lab-add-task-button span {
+  margin-right: 7px;
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* =========================================
+   DETAILED GUIDE
+========================================= */
+.add-lab-detailed-guide {
+  margin-top: 4px;
+  padding: 18px 0 0;
+  border-top: 1px solid #b8c7dd;
+}
+
+/* =========================================================
+   DETAILED GUIDE DESCRIPTION
+========================================================= */
+.add-lab-textarea-count textarea,
+.add-lab-guide-description textarea {
+  height: 110px !important;
+  min-height: 90px !important;
+  max-height: 110px !important;
+  resize: none !important;
+  overflow: hidden;
+  padding: 10px 45px 22px 12px !important;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.add-lab-guide-steps {
+  margin-top: 18px;
+}
+.add-lab-guide-steps-header label {
+  display: block;
+  color: #102a63;
+  font-size: 12px;
+  font-weight: 700;
+}
+.add-lab-guide-steps-header p {
+  margin: 4px 0 12px;
+  color: #64748b;
+  font-size: 11px;
+}
+.add-lab-guide-step {
+  margin-bottom: 8px;
+  border: 1px solid #cfd9ea;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #ffffff;
+}
+.add-lab-guide-step-header {
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  background: #f8fafc;
+  cursor: pointer;
+}
+.add-lab-guide-step-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #102a63;
+  font-size: 12px;
+}
+.add-lab-step-number {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #123a83;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+}
+.add-lab-guide-step-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.add-lab-step-delete {
+  border: none;
+  background: transparent;
+  color: #ef4444;
+  font-size: 20px;
+  cursor: pointer;
+}
+.add-lab-guide-step-actions > span {
+  color: #17376f;
+}
+.add-lab-guide-step-body {
+  padding: 16px;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* =========================================================
+   INSTRUCTIONS + IMAGES
+========================================================= */
+
+.add-lab-step-two-column {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 15px;
+  width: 100%;
+  align-items: start;
+  min-height: 0;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   INSTRUCTIONS
+
+   ListEditor styled like the previous textarea
+========================================================= */
+
+.add-lab-step-two-column .instructions-field .list-editor {
+  width: 100%;
+  height: 350px !important;
+  min-height: 350px !important;
+  max-height: 350px !important;
+  box-sizing: border-box;
+  padding: 7px 0;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 26px;
+  color: #102a63;
+  overflow-y: auto;
+  overflow-x: hidden;
+  text-align: justify;
+  border: 1px solid #cfd9ea;
+  border-radius: 6px;
+  background: #ffffff;
+  outline: none;
+  cursor: text;
+}
+
+/* =========================================================
+   PLACEHOLDER
+========================================================= */
+
+.add-lab-step-two-column
+  .instructions-field
+  .list-editor[data-empty="true"]::before {
+  content: attr(data-placeholder);
+  display: block;
+  padding: 5px 10px;
+  white-space: pre-line;
+  color: #7b8baa;
+  text-align: left;
+  pointer-events: none;
+}
+
+/* =========================================================
+   INSTRUCTIONS LIST
+========================================================= */
+
+.add-lab-step-two-column .instructions-field .list-editor ol {
+  margin: 0;
+  padding-left: 28px;
+}
+
+/* =========================================================
+   INSTRUCTION LIST ITEMS
+========================================================= */
+
+.add-lab-step-two-column .instructions-field .list-editor ol li {
+  margin: 0;
+  padding-left: 3px;
+  line-height: 25px;
+}
+
+/* =========================================================
+   FOCUS
+========================================================= */
+
+.add-lab-step-two-column .instructions-field .list-editor:focus {
+  border-color: #1d4ed8;
+  box-shadow: 0 0 0 2px rgba(29, 78, 216, 0.08);
+}
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+.add-lab-step-two-column .instructions-field .list-editor::-webkit-scrollbar {
+  width: 6px;
+}
+
+.add-lab-step-two-column
+  .instructions-field
+  .list-editor::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.add-lab-step-two-column
+  .instructions-field
+  .list-editor::-webkit-scrollbar-thumb {
+  background: #c8d5e8;
+
+  border-radius: 10px;
+}
+
+.add-lab-step-two-column
+  .instructions-field
+  .list-editor::-webkit-scrollbar-thumb:hover {
+  background: #aebfd9;
+}
+
+/* =========================================================
+   INSTRUCTIONS FIELD
+
+   Do not force the parent to 350px
+========================================================= */
+
+.add-lab-step-two-column > .instructions-field {
+  height: auto;
+
+  min-height: 0;
+}
+
+/* =========================================================
+   IMAGES COLUMN
+========================================================= */
+
+.add-lab-step-two-column > .add-lab-field:nth-child(2) {
+  height: 385px;
+  min-height: 385px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+
+  align-self: stretch;
+}
+
+/* =========================================================
+   IMAGES LABEL
+========================================================= */
+
+.add-lab-step-two-column > .add-lab-field:nth-child(2) > label:first-child {
+  flex-shrink: 0;
+  margin-bottom: 6px;
+}
+
+/* =========================================================
+   IMAGE SCROLL AREA
+========================================================= */
+
+.add-lab-images-scroll-area {
+  width: 100%;
+
+  flex: 1;
+  min-height: 0;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   IMAGE GRID
+========================================================= */
+
+.add-lab-images-grid {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 8px;
+
+  align-content: start;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   INDIVIDUAL IMAGE CARD
+========================================================= */
+
+.add-lab-image-card {
+  width: 100%;
+
+  border: 1px solid #cfd9ea;
+  border-radius: 6px;
+
+  background: #ffffff;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   IMAGE PREVIEW AREA
+========================================================= */
+
+.add-lab-image-preview-area {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  background: #f8fafc;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.add-lab-image-preview-area img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+/* =========================================================
+   REMOVE IMAGE BUTTON
+========================================================= */
+
+.add-lab-image-preview-area button {
+  position: absolute;
+
+  top: 4px;
+  right: 4px;
+
+  width: 22px;
+  height: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #ffffff;
+  color: #ef4444;
+
+  font-size: 13px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.add-lab-image-preview-area button:hover {
+  background: #fee2e2;
+}
+
+/* =========================================================
+   IMAGE DESCRIPTION AREA
+========================================================= */
+
+.add-lab-image-description-area {
+  width: 100%;
+
+  padding: 6px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border-top: 1px solid #cfd9ea;
+}
+
+/* =========================================================
+   IMAGE DESCRIPTION INPUT
+========================================================= */
+
+.add-lab-image-description {
+  width: 100%;
+  height: 32px;
+
+  padding: 0 8px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #cfd9ea;
+  border-radius: 5px;
+
+  background: #ffffff;
+  color: #102a63;
+
+  font-family: inherit;
+  font-size: 11px;
+
+  outline: none;
+}
+
+.add-lab-image-description::placeholder {
+  color: #7b8baa;
+}
+
+.add-lab-image-description:focus {
+  border-color: #1d4ed8;
+
+  box-shadow: 0 0 0 2px rgba(29, 78, 216, 0.08);
+}
+
+/* =========================================================
+   ADD IMAGE BUTTON
+   Centered inside the full-width button
+========================================================= */
+
+/* =========================================================
+   ADD IMAGE BUTTON
+========================================================= */
+
+.add-lab-add-image-button {
+  width: 100%;
+  height: 38px;
+
+  margin-top: 8px;
+  margin-bottom: 0;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+  border: 1px solid #cfd9ea;
+  border-radius: 6px;
+
+  background: #ffffff;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   ADD IMAGE CONTENT
+========================================================= */
+
+.add-lab-add-image-content {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+
+  box-sizing: border-box;
+
+  color: #0f45b5;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  line-height: 1;
+}
+
+/* =========================================================
+   PLUS
+========================================================= */
+
+.add-lab-add-image-plus {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.add-lab-add-image-text {
+  display: flex;
+
+  align-items: center;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  line-height: 1;
+}
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.add-lab-add-image-button:hover {
+  background: #f5f8ff;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .add-lab-step-two-column {
+    grid-template-columns: 0.85fr 1.15fr;
+  }
+
+  .add-lab-step-two-column > .add-lab-field:first-child {
+    height: auto;
+    min-height: 0;
+  }
+
+  .add-lab-step-two-column > .add-lab-field:nth-child(2) {
+    height: 385px;
+    min-height: 385px;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .add-lab-step-two-column .add-lab-field > textarea {
+    height: 350px !important;
+    min-height: 350px !important;
+    max-height: 350px !important;
+  }
+
+  .add-lab-images-scroll-area {
+    flex: 1;
+    min-height: 0;
+  }
+
+  .add-lab-add-image-button {
+    margin-top: 2px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL SCREENS
+========================================================= */
+
+@media (max-width: 600px) {
+  .add-lab-step-two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .add-lab-step-two-column > .add-lab-field:first-child {
+    height: auto;
+  }
+
+  .add-lab-step-two-column > .add-lab-field:nth-child(2) {
+    height: auto;
+    min-height: 0;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .add-lab-step-two-column .add-lab-field > textarea {
+    height: 250px !important;
+    min-height: 250px !important;
+    max-height: 250px !important;
+  }
+
+  .add-lab-images-scroll-area {
+    max-height: 230px;
+    flex: none;
+  }
+
+  .add-lab-image-preview-area {
+    height: 90px;
+  }
+
+  .add-lab-image-description {
+    height: 30px;
+    font-size: 10px;
+  }
+
+  .add-lab-add-image-button {
+    margin-top: 0px;
+  }
+}
+
+/* =========================================
+   CODE SNIPPETS
+========================================= */
+
+.add-lab-section-code-accordion {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* =========================================
+   CODE ACCORDION ITEM
+========================================= */
+
+.add-lab-section-code-accordion-item {
+  width: 100%;
+  border: 1px solid #cfd9ea;
+  border-radius: 8px;
+  background: #ffffff;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* =========================================
+   CODE ACCORDION HEADER
+========================================= */
+
+.add-lab-section-code-accordion-header {
+  width: 100%;
+  min-height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 10px 0 12px;
+
+  box-sizing: border-box;
+
+  background: #f8fafc;
+}
+
+/* =========================================
+   CODE ACCORDION TITLE
+========================================= */
+
+.add-lab-section-code-accordion-title {
+  min-width: 0;
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  color: #102a63;
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+/* =========================================
+   ACCORDION ARROW
+========================================= */
+
+.add-lab-section-code-accordion-arrow {
+  width: 14px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #102a63;
+
+  font-size: 14px;
+  line-height: 1;
+
+  flex-shrink: 0;
+}
+
+/* =========================================
+   CODE TITLE TEXT
+========================================= */
+
+.add-lab-section-code-accordion-text {
+  overflow: hidden;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  color: #102a63;
+}
+
+/* =========================================
+   COPY BUTTON
+========================================= */
+
+.add-lab-section-code-copy-button {
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  padding: 0 12px;
+
+  border: 1px solid #cfd9ea;
+  border-radius: 6px;
+
+  background: #ffffff;
+  color: #102a63;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  flex-shrink: 0;
+}
+
+.add-lab-section-code-copy-button:hover {
+  background: #f5f8ff;
+}
+
+/* =========================================
+   COPY ICON
+========================================= */
+
+.add-lab-section-code-copy-button i {
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* =========================================
+   CODE CONTENT
+========================================= */
+
+.add-lab-section-code-content {
+  width: 100%;
+
+  padding: 10px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border-top: 1px solid #cfd9ea;
+}
+
+/* =========================================
+   CODE TEXTAREA
+========================================= */
+
+.add-lab-section-code-content textarea {
+  display: block;
+
+  width: 100%;
+  min-height: 240px;
+
+  padding: 12px 14px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #cfd9ea;
+  border-radius: 6px;
+
+  background: #ffffff;
+  color: #102a63;
+
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+  line-height: 1.6;
+
+  /* Preserve code formatting */
+  white-space: pre;
+  overflow-wrap: normal;
+  tab-size: 2;
+
+  /* Allow horizontal scrolling for long commands/lines */
+  overflow-x: auto;
+
+  resize: vertical;
+
+  outline: none;
+
+  /* Disable browser text behavior */
+  spell-check: false;
+}
+
+.add-lab-section-code-content textarea:focus {
+  border-color: #0f45b5;
+  box-shadow: 0 0 0 1px rgba(15, 69, 181, 0.08);
+}
+
+/* =========================================
+   REMOVE CODE BUTTON
+========================================= */
+
+.add-lab-section-code-remove-button {
+  margin-top: 8px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+  color: #ef4444;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.add-lab-section-code-remove-button:hover {
+  color: #dc2626;
+}
+
+/* =========================================
+   ADD CODE BUTTON
+========================================= */
+
+.add-lab-add-code-button {
+  width: 100%;
+  height: 36px;
+
+  margin-top: 8px;
+
+  border: 1px solid #cfd9ea;
+  border-radius: 6px;
+
+  background: #ffffff;
+  color: #0f45b5;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.add-lab-add-code-button:hover {
+  background: #f5f8ff;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+  .add-lab-section-code-accordion-header {
+    min-height: 46px;
+
+    padding-left: 10px;
+    padding-right: 8px;
+  }
+
+  .add-lab-section-code-accordion-title {
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .add-lab-section-code-copy-button {
+    height: 32px;
+
+    padding: 0 9px;
+
+    font-size: 11px;
+  }
+
+  .add-lab-section-code-content {
+    padding: 8px;
+  }
+
+  .add-lab-section-code-content textarea {
+    min-height: 180px;
+
+    padding: 10px 12px;
+
+    font-size: 12px;
+  }
+}
+
+/* =========================================================
+   TIP SECTION
+========================================================= */
+
+.add-lab-tip-section {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+
+  margin-top: 16px;
+}
+
+/* =========================================================
+   TIP TITLE INPUT
+========================================================= */
+
+.add-lab-tip-section .add-lab-field input {
+  width: 100%;
+  height: 42px;
+
+  box-sizing: border-box;
+
+  padding: 0 12px;
+
+  border: 1px solid #cfd9ea;
+  border-radius: 6px;
+
+  background: #ffffff;
+
+  color: #102a63;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   TIP TEXTAREA
+========================================================= */
+
+.add-lab-tip-section .add-lab-field textarea {
+  width: 100%;
+
+  height: 125px;
+  min-height: 125px;
+  max-height: 125px;
+
+  box-sizing: border-box;
+
+  padding: 12px;
+
+  resize: vertical;
+
+  border: 1px solid #cfd9ea;
+  border-radius: 6px;
+
+  background: #ffffff;
+
+  color: #102a63;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   CHARACTER COUNT
+========================================================= */
+
+.add-lab-tip-section .add-lab-character-count {
+  text-align: right;
+
+  margin-top: -24px;
+  margin-right: 8px;
+
+  color: #576fa4;
+
+  font-size: 11px;
+
+  pointer-events: none;
+}
+
+.add-lab-add-step-button {
+  width: 100%;
+  height: 38px;
+  margin-top: 10px;
+  border: 1px solid #cfd9ea;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #0f45b5;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.add-lab-add-step-button:hover {
+  background: #f5f8ff;
+}
+.add-lab-add-step-button span {
+  margin-right: 7px;
+  font-size: 18px;
+}
+.add-lab-field .optional {
+  color: #64748b;
+  font-size: 10px;
+  font-weight: 500;
+}
+.add-lab-add-section-button {
+  width: 100%;
+  min-height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 14px;
+  border: 1px solid #cfd9ea;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #0f45b5;
+  cursor: pointer;
+}
+.add-lab-add-section-button:hover {
+  background: #f7f9fd;
+}
+.add-lab-add-section-button > span {
+  font-size: 21px;
+}
+.add-lab-add-section-button div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.add-lab-add-section-button strong {
+  font-size: 13px;
+}
+.add-lab-add-section-button small {
+  margin-top: 3px;
+  color: #64748b;
+  font-size: 10px;
+}
+
+/* =========================================
+   RESPONSIVE STYLES
+========================================= */
+@media (max-width: 900px) {
+  .add-lab-stepper {
+    width: 100%;
+  }
+  .add-lab-step-line {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .add-lab-form-grid,
+  .add-lab-two-column-layout {
+    grid-template-columns: 1fr;
+  }
+  .add-lab-form-column + .add-lab-form-column {
+    margin-top: 24px;
+  }
+
+  .add-lab-section-summary,
+  .add-lab-result-tip-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.add-lab-code-row {
+  grid-template-columns: 1fr;
+}
+.add-lab-code-row > button {
+  display: none;
+}
+
+@media (max-width: 650px) {
+  .add-lab-top {
+    align-items: flex-start;
+    gap: 15px;
+    flex-direction: column;
+  }
+  .add-lab-title-area {
+    margin-top: 8px;
+  }
+  .add-lab-title-content h1 {
+    font-size: 28px;
+  }
+  .add-lab-stepper {
+    margin-top: 22px;
+    margin-bottom: 25px;
+  }
+  .add-lab-step-item {
+    min-width: 70px;
+  }
+  .add-lab-step-circle {
+    width: 42px;
+    height: 42px;
+    font-size: 16px;
+  }
+  .add-lab-step-label {
+    font-size: 12px;
+  }
+  .add-lab-step-card {
+    padding: 16px;
+  }
+  .add-lab-navigation {
+    margin-top: 14px;
+  }
+  .add-lab-previous-button,
+  .add-lab-next-button {
+    min-width: 90px;
+    height: 36px;
+  }
+}
+@media (max-width: 600px) {
+  .add-lab-form-grid,
+  .add-lab-two-column-layout {
+    gap: 16px;
+  }
+  .add-lab-field textarea {
+    min-height: 120px;
+  }
+  .add-lab-two-column-layout
+    .add-lab-form-column:first-child
+    .add-lab-field:first-child
+    textarea {
+    height: 76px;
+    min-height: 76px;
+  }
+  .add-lab-two-column-layout
+    .add-lab-form-column:last-child
+    .add-lab-field:first-child
+    textarea {
+    height: 136px;
+    min-height: 136px;
+  }
+  .add-lab-service-input-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .add-lab-service-add-button {
+    width: 100%;
+  }
+  .add-lab-section-card-body {
+    padding: 12px;
+  }
+  .add-lab-images-grid {
+    grid-template-columns: 1fr;
+  }
+}
